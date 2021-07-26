@@ -48,14 +48,10 @@ li,
 .lists {
   text-decoration: none;
   color: black;
-  transition: 0.6s;
+  transition: 0.7s;
   margin: 0px 24px;
 }
-.lists:hover {
-  text-align: center;
-  background: red;
-  /* border-radius: 1rem; */
-}
+
 .btn {
   margin: 0rem 1.8rem;
   margin-top: 0.6rem;
@@ -76,6 +72,13 @@ button a {
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   font-weight: bolder;
   font-size: 0.8rem;
+}
+li :hover {
+  color: red;
+}
+.lists:hover {
+  text-align: center;
+  /* border-radius: 1rem; */
 }
 button {
   text-transform: uppercase;
@@ -165,10 +168,12 @@ figcaption,
 .intro h1 {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   /* line-height: 1.6rem; */
-  padding-top: 0.2rem;
-  height: 5rem;
+  /* padding-bottom: 0.2rem; */
+  height: 4.2rem;
   width: 32rem;
+  margin-left: 1rem;
   /* border: 2px solid red; */
+  /* font-size: 2rem; */
 
   border-radius: 5px;
 }
@@ -298,10 +303,11 @@ img {
   /* margin-left: 2.5rem; */
   margin: 1rem 1rem;
 }
-.service-container-paint-job,
+/* .service-container-paint-job,
 .service-container-home-appliance {
-  /* margin-bottom: 2rem; */
-}
+  margin-bottom: 2rem;
+} */
+
 .service figure {
   width: 21rem;
   height: 17rem;
@@ -372,9 +378,9 @@ img {
 .house-customization-text-container h2 {
   font-size: 1.4rem;
 }
-.house-customization-text-container p {
-  /* padding: 0rem 1rem; */
-}
+/* .house-customization-text-container p {
+  padding: 0rem 1rem;
+} */
 .house-customization-text-container {
   width: 10rem;
   /* height: 9rem; */
@@ -742,7 +748,7 @@ section {
   }
   .intro p {
     padding-top: 0.2rem;
-    margin-left: 0.2rem;
+    /* margin-left: 0.2rem; */
     /* font-weight: bolder; */
   }
   .intro-text {
@@ -1069,7 +1075,7 @@ section {
     padding-top: 8rem;
   }
   .name {
-    font-size: 0.6rem;
+    font-size: 0.9rem;
   }
   .navigation {
     width: 100%;
@@ -1255,6 +1261,14 @@ section {
   .service figure {
     border-radius: 0.5rem;
   }
+  .contact-name .input {
+    width: 90%;
+    margin: auto;
+    padding-bottom: 0.3rem;
+  }
+  .text-area {
+    width: 90%;
+  }
 }
 @media only screen and (max-width: 342px) {
   #contact {
@@ -1343,10 +1357,10 @@ section {
     height: 4rem;
     border-radius: 27px;
   }
-  .service-container-smart-home,
+  /* .service-container-smart-home,
   .sevice-container-house-customization {
-    /* padding: 0.6rem 0.5rem; */
-  }
+    padding: 0.6rem 0.5rem;
+  } */
   .house-customization-img1,
   .house-customization-img2 {
     width: 7rem;
