@@ -1,0 +1,22 @@
+.Reg {
+  width: 30rem;
+  height: 17rem;
+  border-radius: 0.3rem;
+  margin: auto;
+  margin-top: 7rem;
+  padding: 2.4rem;
+  background: #f1f1f1;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.Reg h1 {
+  text-align: center;
+}
+@media (max-width: 515px) {
+  .Reg {
+    width: 95%;
+    padding: 1.7rem;
+  }
+}

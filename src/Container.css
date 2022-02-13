@@ -1,0 +1,29 @@
+.container,
+.mobilecontainer {
+  display: flex;
+  align-items: flex-start;
+}
+.holder {
+  /* background: black; */
+  height: 93vh;
+  width: 100%;
+  overflow: scroll;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  border-top: 0.7rem solid rgb(0, 0, 0, 0.87);
+  background: #f1f1f1;
+  display: block;
+}
+.holderMobile {
+  display: none;
+}
+@media (max-width: 881px) {
+  .holder {
+    border-top: 0.4rem solid rgb(0, 0, 0, 0.87);
+  }
+}
+@media (max-width: 883px) {
+  .container {
+    display: block;
+  }
+}

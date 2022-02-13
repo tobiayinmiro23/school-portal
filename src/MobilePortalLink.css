@@ -1,0 +1,69 @@
+* {
+  margin: 0em;
+  padding: 0em;
+  box-sizing: border-box;
+}
+.MobilePortalLink .userimg {
+  width: 5.5rem;
+  background: white;
+  padding: 1rem;
+  padding-top: 0.75rem;
+  border-radius: 50%;
+  margin: auto;
+  margin-bottom: 1rem;
+}
+
+.MobilePortalLink {
+  background: rgb(97, 218, 251, 0.86);
+  width: 100%;
+  height: 100vh;
+  height: fit-content;
+  padding-top: 3rem;
+}
+.plink {
+  /* background: red; */
+  background: rgb(97, 218, 251, 0.86);
+}
+.current {
+  background: rgba(1, 31, 39, 0.6);
+}
+
+.color {
+  color: white;
+}
+.general {
+  padding: 0.52rem;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  color: rgb(0, 0, 0, 0.8);
+}
+.schcalender {
+  font-size: 1.72rem;
+}
+.general:focus {
+  background: black;
+  color: white;
+}
+.cpyimg {
+  font-size: smaller;
+}
+.MobilePortalLink .cpy {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3rem;
+  padding-bottom: 1.2rem;
+  font-weight: bolder;
+  font-size: 0.86rem;
+}
+.none {
+  display: none;
+}
+@media (max-width: 488px) {
+  .MobilePortalLink .userimg {
+    padding: 0.7rem;
+    width: 5rem;
+    /* padding-top: 0.5rem; */
+  }
+}
