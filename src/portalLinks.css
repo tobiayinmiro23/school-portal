@@ -73,6 +73,9 @@
     background: rgb(97, 218, 251, 0.86);
     height: 100vh;
   }
+  .cpy {
+    padding-bottom: 3rem;
+  }
   .PortalLinksMobile {
     position: absolute;
     left: 100%;
