@@ -16,6 +16,9 @@
 .PortalLinks {
   background: rgb(97, 218, 251, 0.86);
   width: 21rem;
+  overflow: scroll;
+  overflow-x: hidden;
+  overflow-y: scroll;
   height: 93vh;
   padding-top: 3rem;
 }
@@ -50,7 +53,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 1.4rem;
+  margin: 1.4rem 0rem;
   font-weight: bolder;
   font-size: 0.86rem;
 }
