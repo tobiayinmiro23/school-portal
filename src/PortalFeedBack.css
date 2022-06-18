@@ -1,0 +1,55 @@
+.portalFeedBack textarea {
+  display: block;
+  width: 85%;
+  margin: auto;
+  outline: none;
+  border: none;
+  background-color: rgb(241, 241, 241, 0.8);
+  padding: 0.8rem;
+  border-radius: 0.2rem;
+}
+.portalFeedBack h1 {
+  margin-bottom: 1rem;
+}
+.portalFeedBack {
+  background-color: #f1f1f1;
+  background-color: white;
+  margin: auto;
+  margin-top: 5rem;
+  width: 36rem;
+  padding: 0.7rem;
+  text-align: center;
+}
+.portalFeedBack button {
+  margin-top: 1em;
+  margin-bottom: 1rem;
+  width: 85%;
+  background: #61dafbdb;
+  text-align: center;
+  border: none;
+  font-weight: bolder;
+  cursor: pointer;
+  border: 1px solid gray;
+  padding: 0.55rem 1rem;
+  border-radius: 0.17rem;
+}
+@media (max-width: 610px) {
+  .portalFeedBack {
+    width: 95%;
+  }
+}
+@media (max-width: 544px) {
+  .portalFeedBack textarea {
+    height: 9rem;
+    margin-bottom: 0.4rem;
+  }
+  .portalFeedBack {
+    padding: 0.5rem;
+  }
+}
+@media (max-width: 496px) {
+  .portalFeedBack textarea,
+  .portalFeedBack button {
+    width: 95%;
+  }
+}

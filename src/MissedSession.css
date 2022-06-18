@@ -1,0 +1,22 @@
+.MissedSession {
+  width: 30rem;
+  height: 17rem;
+  border-radius: 0.3rem;
+  margin: auto;
+  margin-top: 7rem;
+  padding: 2.4rem;
+  background: #f1f1f1;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.MissedSession h1 {
+  text-align: center;
+}
+@media (max-width: 515px) {
+  .MissedSession {
+    width: 95%;
+    padding: 1.7rem;
+  }
+}
