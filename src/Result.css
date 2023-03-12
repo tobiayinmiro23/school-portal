@@ -14,7 +14,7 @@
 
 thead th {
   border-bottom: 1px solid gray;
-  padding: 0.9rem 1rem;
+  padding: 1rem;
 }
 .Result .btn {
   margin-top: 3rem;
@@ -38,7 +38,7 @@ center {
     padding:1rem 0.3rem;
   }
   thead th {
-    padding: 0.4rem 0.5rem;
+    padding: 1rem 0.5rem;
   }
   .Result .btn {
     margin-left: 78%;
@@ -49,7 +49,7 @@ center {
     padding:1rem 0.14rem;
   }
   thead th {
-    padding: 0.25rem 0.26rem;
+    padding: 1rem 0.26rem;
   }
   .Result .btn {
     margin-left: 78%;
@@ -61,7 +61,7 @@ center {
     font-size: 0.9rem;
   }
   thead tr th {
-    padding: 0.25rem 0.33rem;
+    padding: 1rem 0.33rem;
     font-size: 0.9rem;
   }
   .Result .btn {
@@ -76,7 +76,7 @@ center {
     padding:1rem 0.24rem;
   }
   thead th {
-    padding: 0.25rem 0.43rem;
+    padding: 1rem 0.43rem;
   }
 }
 @media (max-width: 344px) {
@@ -85,7 +85,7 @@ center {
     font-size: 0.8rem;
   }
   thead tr th {
-    padding: 0.25rem 0.33rem;
+    padding: 1rem 0.33rem;
     font-size: 0.8rem;
   }
   .Result .btn {
