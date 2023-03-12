@@ -35,7 +35,7 @@ center {
 }
 @media (max-width: 917px) {
   .Result td {
-    padding:0.5rem 0.3rem;
+    padding:1rem 0.3rem;
   }
   thead th {
     padding: 0.4rem 0.5rem;
@@ -46,7 +46,7 @@ center {
 }
 @media (max-width: 545px) {
   .Result td {
-    padding:0.5rem 0.14rem;
+    padding:1rem 0.14rem;
   }
   thead th {
     padding: 0.25rem 0.26rem;
@@ -57,7 +57,7 @@ center {
 }
 @media (max-width: 523px) {
   .Result td {
-    padding:0.5rem 0.14rem;
+    padding:1rem 0.14rem;
     font-size: 0.9rem;
   }
   thead tr th {
@@ -73,7 +73,7 @@ center {
     display: none;
   }
   .Result td {
-    padding:0.5rem 0.24rem;
+    padding:1rem 0.24rem;
   }
   thead th {
     padding: 0.25rem 0.43rem;
@@ -81,7 +81,7 @@ center {
 }
 @media (max-width: 344px) {
   .Result td {
-    padding:0.5rem 0.13rem;
+    padding:1rem 0.13rem;
     font-size: 0.8rem;
   }
   thead tr th {
