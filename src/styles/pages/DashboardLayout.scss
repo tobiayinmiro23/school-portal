@@ -1,0 +1,37 @@
+@use '../partials/variables' as *;
+.layoutContainer {
+    .layout{
+        display: flex;
+    }
+    .wrapper{
+        height: 93vh;
+        border-top: 0.7rem solid rgb(0, 0, 0, 0.87);;
+        overflow-y: scroll;
+        background-color:$secondaryBackgroundcolor;
+        width: 82vw;
+    }
+    .sidebar{
+        width: 18vw;
+    }
+  }
+  @media (max-width: 883px) {
+    .sidebar{
+        width: 100vw;
+        position: absolute;
+        left: -100%;
+        transition: 1s;
+       border-top: 2px solid white;
+        height: 100vh;
+    }
+    .layoutContainer .wrapper{
+        width: 100vw;
+    }
+    .sidebarMobile {
+        position: absolute;
+        left: 0%;
+        height: 100vh;
+        transition: 1s;
+        width: 100%;
+      }
+
+  }

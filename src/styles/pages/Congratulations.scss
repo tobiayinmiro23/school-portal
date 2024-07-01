@@ -1,0 +1,39 @@
+@use '../partials/variables' as *;
+@use '../partials/mixins' as *;
+
+.Congratulations {
+    width: 100%;
+    margin: auto;
+    padding-top: 7rem;
+    .img{
+        width:13rem;
+        margin: auto;
+    }
+    button{
+        display: block;
+        margin: auto;
+        @include button;
+        font-weight: 700;
+        padding: 0.75rem 2rem;
+        border-radius: 2rem;
+        background-color:$addCourseBackground;
+        &:hover{
+            background-color:  $addCourseHoverBackground;
+        }
+    }
+    h2{
+        text-align: center;
+        margin: 1.2rem;
+        font-family:Verdana, Geneva, Tahoma, sans-serif ;
+    }
+}
+@media only screen and (max-width:733px){
+    .Congratulations{
+        padding:4rem 0rem;
+    }
+}
+@media only screen and (max-width:433px){
+    .Congratulations{
+        padding-top:2.2rem ;
+    }
+}

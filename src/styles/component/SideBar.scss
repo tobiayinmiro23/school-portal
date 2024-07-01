@@ -1,0 +1,116 @@
+@use '../partials/variables' as *;
+@mixin profilePicture{
+  width: 5.5rem;
+    background: #ffffff;
+    height: 5.5rem;
+    border-radius: 50%;
+    margin: auto;
+    margin-bottom: 1rem;
+}
+* {
+    margin: 0em;
+    padding: 0em;
+    box-sizing: border-box;
+  }
+  .userimg {
+    padding-top: 0.75rem;
+    padding: 0.3rem;
+    @include profilePicture
+  
+  }
+  .progressWrapper{
+    text-align: center;
+    margin-top: 1rem;
+    .css-1rn30mb-MuiCircularProgress-root{
+      color: $primaryBackgroundcolor;
+    }
+  }
+   .whiteBackground{
+    background-color: #ffffff;
+  }
+  .noProfilePic {
+    padding: 1rem;
+    padding-top: 0.75rem;
+    @include profilePicture
+  
+  }
+  .userimg img{
+    border-radius: 50%;
+    height: 100%;
+  }
+  .PortalLinks .upload{
+    display: none;
+    width: 100%;
+    cursor: pointer;
+
+  }
+  .PortalLinks .userimgwrapper .uploadWrapper{
+    display: block;
+    margin-left: auto;
+    margin-left: 53%;
+    width: 1.5rem;
+    margin-bottom: 3rem;
+  }
+  .PortalLinks .userimgwrapper .img{
+    margin-top: -2.2rem;
+    width: 100%;
+    height: 1.3rem;
+    cursor: pointer;
+  }
+  .PortalLinks {
+   background:$primaryBackgroundcolor;
+   width: 100%;
+   overflow: scroll;
+   overflow-x: hidden;
+   overflow-y: scroll;
+   height: 93vh;
+   padding-top: 3rem;
+    border-top: 2px solid white;
+  }
+
+  .current {
+    background:$sideBarFocusBackground;
+    h4,.img{
+      color:$sideBarTextFocusColor;
+    }
+  }
+  .general {
+    padding: 0.52rem;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    color: rgb(0, 0, 0, 0.8);
+    h4{
+      font-size: $sidebarTextFontSize;
+      padding: 0rem;
+      margin: 0rem;
+    }
+  }
+  .schcalender {
+    font-size: 1.72rem;
+  }
+  .cpyimg {
+    font-size: smaller;
+  }
+  .cpy {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 1.4rem 0rem;
+    font-weight: bolder;
+    font-size: 0.86rem;
+  }
+  @media (max-width: 883px) {
+    .userimgwrapper {
+      padding-top: 2rem;
+    }
+  
+    .PortalLinks {
+        // border-top: 2px solid black;
+    }
+    .cpy {
+      padding-bottom: 3rem;
+    }
+ 
+  }
+  

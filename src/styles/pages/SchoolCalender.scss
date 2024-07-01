@@ -1,0 +1,30 @@
+@use '../partials/_variables' as *;
+
+.schcalendar {
+  width: fit-content;
+  margin: auto;
+  margin-top: 3rem;
+  background: $pageBackground;
+  box-shadow: $primaryBoxShadow;
+  padding: 0.5rem;
+  padding-bottom: 2rem;
+  margin-bottom: 4rem;
+}
+.schcalendar td {
+  border-bottom: 1px solid gray;
+  padding: 0.5rem;
+}
+
+thead th {
+  border-bottom: 1px solid gray;
+  padding: 0.9rem 1rem;
+}
+@media (max-width: 490px) {
+  .schcalendar td {
+    padding: 0.14rem;
+    font-size: 0.87rem;
+  }
+  thead th {
+    padding: 0.19rem 0.32rem;
+  }
+}

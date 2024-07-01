@@ -1,0 +1,88 @@
+@use '../partials/variables' as *;
+@use '../partials/mixins' as *;
+
+.Result {
+  width: fit-content;
+  margin: auto;
+  margin-top: 3rem;
+  background:$pageBackground;
+  padding: 0.5rem;
+  margin-bottom: 4rem;
+  box-shadow: $primaryBoxShadow;
+
+}
+.Result td {
+  border-bottom: 1px solid gray;
+  padding: 0.5rem;
+}
+
+thead th {
+  border-bottom: 1px solid gray;
+  padding: 0.9rem 1rem;
+}
+.Result .btn button {
+  margin-top: 3rem;
+  margin-bottom: 1.8rem;
+  // margin-left: 90%;
+  @include button
+}
+.Result .btn{
+  width: fit-content;
+  display: block;
+  margin-left: auto;
+
+}
+.Result .resultWrapper .none {
+  border-bottom: 2px solid white;
+}
+center {
+  margin-top: 1.4rem;
+  font-weight: bolder;
+}
+@media (max-width: 917px) {
+  .Result td {
+    padding:0.5rem 0.3rem;
+  }
+  thead th {
+    padding: 0.4rem 0.5rem;
+  }
+}
+@media (max-width: 545px) {
+  .Result td {
+    padding:0.5rem 0.14rem;
+  }
+  thead th {
+    padding: 0.25rem 0.26rem;
+  }
+}
+@media (max-width: 523px) {
+  .Result td {
+    padding:0.5rem 0.14rem;
+    font-size: 0.9rem;
+  }
+  thead tr th {
+    padding: 0.25rem 0.33rem;
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 490px) {
+  .Result-none {
+    display: none;
+  }
+  .Result td {
+    padding:0.5rem 0.24rem;
+  }
+  thead th {
+    padding: 0.25rem 0.43rem;
+  }
+}
+@media (max-width: 344px) {
+  .Result td {
+    padding:0.5rem 0.13rem;
+    font-size: 0.8rem;
+  }
+  thead tr th {
+    padding: 0.25rem 0.33rem;
+    font-size: 0.8rem;
+  }
+}

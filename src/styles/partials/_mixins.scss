@@ -1,0 +1,62 @@
+@use './variables' as *;
+@mixin button(){
+    background: $primaryBackgroundcolor;
+    text-align: center;
+    border: none;
+    font-weight: bolder;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0px 2px 5px #dcdada;
+    padding: 0.55rem 1rem;
+    border-radius: 0.17rem;
+    &:hover{
+        background-color: $primaryBtnHover;
+    }
+    h3{
+        font-size: 1.1rem;
+       color: white;
+       font-weight: bold;
+
+    }
+}
+
+@mixin input($background){
+    display: block;
+    width: 90%;
+    outline: none;
+    border: none;
+    background: $background;
+    border: 1px solid #f1f1f1;
+    padding: 0.8rem;
+    margin: auto;
+    &:focus{
+        background: white;
+    }
+}
+
+@mixin generalText{
+    font-family: $primalyFontFamily;
+    font-weight:700;
+    margin: 0;
+    line-height: normal;
+    color: black;
+}
+ 
+@mixin multipleCourses($border,$background){
+        border-radius: 2rem;
+        padding: 0.55rem 1rem;
+        border: 1px solid $border;
+        background: white;
+        box-shadow: none;
+        &:hover{
+          background:$border ;
+          h3{
+            color: white;
+          }
+        }
+        h3{
+          color: $border;
+          font-weight: normal;
+
+        }
+}

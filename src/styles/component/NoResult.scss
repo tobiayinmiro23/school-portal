@@ -1,0 +1,33 @@
+.NoResult{
+    .NoResultImg{
+        width: 40%;
+        margin: auto;
+        margin-top: 4rem;
+    }
+    h2{
+        text-align: center;
+        font-family:Verdana, Geneva, Tahoma, sans-serif ;
+        margin-top: 1rem;
+    }
+}
+@media only screen and (max-width:1309px){
+    .NoResult .NoResultImg{
+        width: 50%;
+        margin-top: 3rem;
+    }
+}
+@media only screen and (max-width:900px){
+    .NoResult .NoResultImg{
+        width: 65%;
+    }
+}
+@media only screen and (max-width:800px){
+    .NoResult .NoResultImg{
+        width: 75%;
+    }
+}
+@media only screen and (max-width:590px){
+    .NoResult .NoResultImg{
+        width: 100%;
+    }
+}

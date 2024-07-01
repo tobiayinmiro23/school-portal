@@ -1,0 +1,56 @@
+@use '../partials/_variables' as *;
+@use '../partials/_mixins' as *;
+
+.portalFeedBack textarea {
+  display: block;
+  width: 85%;
+  margin: auto;
+  outline: none;
+  border: none;
+  background: #f9f8f8;
+  border: 1px solid #f1f1f1;
+  padding: 0.8rem;
+  border-radius: 0.2rem;
+  height: 11rem;
+}
+.portalFeedBack h1 {
+  margin-bottom: 1rem;
+  font-size: $pageHeadingFontSize;
+}
+.portalFeedBack {
+  background: $pageBackground;
+  box-shadow: $primaryBoxShadow;
+  margin: auto;
+  margin-top: 5rem;
+  width: 36rem;
+  padding: 0.7rem;
+  text-align: center;
+  border-radius: 0.4rem;
+}
+.portalFeedBack form button {
+  margin-top: 1em;
+  margin-bottom: 1rem;
+  width: 85%;
+  @include button
+ 
+}
+@media (max-width: 610px) {
+  .portalFeedBack {
+    width: 95%;
+  }
+}
+@media (max-width: 544px) {
+  .portalFeedBack textarea {
+    height: 9rem;
+    margin-bottom: 0.4rem;
+  }
+  .portalFeedBack {
+    padding: 0.5rem;
+  }
+}
+@media (max-width: 496px) {
+  .portalFeedBack textarea,
+  .portalFeedBack button {
+    width: 95%;
+  }
+}

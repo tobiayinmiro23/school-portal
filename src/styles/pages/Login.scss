@@ -1,0 +1,93 @@
+@use '../partials/variables' as *;
+@use '../partials/mixins' as *;
+
+.Login{
+    width: 100%;
+    height: 100vh;
+    padding-top: 9rem;
+    background-color: #f9f8f8;
+    margin: auto;
+    .text input{
+        @include input(white);
+        box-shadow: 0px 0px 5px #f1f1f1;
+        margin-bottom:1.3rem;
+    }
+    .btnContainer{
+        text-align: center;
+    }
+    .LoginCard{
+        width: 33rem;
+        margin: auto;
+    }
+    h1{
+    font-size: $pageHeadingFontSize;
+    text-align: center;
+    }
+}
+.Login form button{
+    width: 90%;
+    margin-top: 0.9rem;
+    @include button;
+}
+.LoginCard .text-center{
+    text-align: center;
+}
+.LoginCard .schlogo{
+    width: 4.5rem;
+    height: 4.5rem;
+    margin: auto;
+    margin-bottom: 2rem;
+}
+.LoginCard .rememberMe{
+    width: 88%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+}
+.LoginCard .rememberMe p{
+    margin: 0;
+    margin-top: -4px;
+}
+@media only screen and (max-width:540px){
+    .Login .LoginCard{
+        width: 100%;
+    }
+}
+@media only screen and (max-height:544px){
+    .Login {
+        height: 100%;
+        padding-top: 4rem;
+        // padding-bottom: 7rem;
+    }
+}
+@media only screen and (max-height:418px){
+     .loaderWrapper {
+        padding-bottom: 30rem;
+        padding-top: 30%;
+    }
+  }
+@media only screen and (max-height:378px){
+     .loaderWrapper {
+        padding-bottom: 30rem;
+        padding-top: 48%;
+    }
+  }
+@media only screen and (max-width:376px){
+    .LoginCard .schlogo{
+        width: 4rem;
+        height: 4rem;
+    }
+}
+@media only screen and (max-height:331px){
+    .loaderWrapper {
+       padding-bottom: 25rem;
+       padding-top: 48%;
+   }
+ }
+@media only screen and (max-height:288px){
+    .loaderWrapper {
+       padding-bottom: 25rem;
+       padding-top: 70%;
+   }
+ }

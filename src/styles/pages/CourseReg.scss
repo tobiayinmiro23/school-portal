@@ -1,0 +1,120 @@
+@use '../partials/variables' as *;
+@use '../partials/mixins' as *;
+
+.Reg {
+  width: fit-content;
+  padding: 2rem 2.4rem;
+  margin: 2rem auto;
+  background:$pageBackground;
+  box-shadow: $primaryBoxShadow;
+}
+.courseReg .Result{
+  box-shadow: none;
+}
+.Reg h2,
+.Reg h3{
+  text-align: center;
+  font-size: $pageHeadingFontSize;
+  font-weight: bolder;
+  font-size: 1.3rem;
+}
+.Reg tr button{
+  @include button;
+  background-color:$addCourseBackground;
+  padding:0.4rem 0.5rem;
+  &:hover{
+    background-color:  $addCourseHoverBackground;
+  }
+}
+
+.Reg h2{
+  text-align: center;
+  font-size: $pageHeadingFontSize;
+  font-weight: bolder;
+}
+.Reg p{
+  margin-top: 1.5rem;
+  text-align: center;
+  font-weight: bold;
+}
+.Reg h3{
+  margin-bottom: 1.2rem;
+}
+.Reg button h3{
+  margin-bottom: 0rem;
+}
+.Reg .submitBtn button{
+  @include button;
+}
+.Reg .cancelMultiple button{
+  background-color: $deleteCourseBackground;
+  &:hover{
+    background-color: $deleteCourseHoverBackground;
+  }
+}
+.Reg .multipleBtnWrapper{
+  margin-top: 2rem;
+}
+ .multipleBtnWrapper .multipleBtn button{
+  @include multipleCourses($primaryBackgroundcolor,white);
+  }
+ .multipleBtnWrapper .cancelMultiple button{
+  @include multipleCourses($deleteCourseBackground,white);
+  }
+.Reg .multipleBtn,
+.Reg .cancelMultiple,
+.Reg .submitBtn{
+  text-align: end;
+}
+
+.Reg .submitBtn{
+  margin-top: 2rem;
+}
+.signature{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1.2rem;
+}
+@media (max-width: 1081px) {
+  .Reg{
+  padding: 1rem 0.4rem;
+  width: 98%;
+  }
+  .courseReg .Reg .Result td{
+    padding: 0.5rem 0rem;
+  }
+  .Reg tr button{
+    padding: 0.4rem 0.3rem;
+  }
+}
+@media (max-width: 1003px) {
+  .Reg .delCourse button{
+      width: 7.3rem;
+  }
+}
+@media (max-width: 985px) {
+  .Reg tr button{
+    width: 6.05rem;
+  }
+}
+@media (max-width: 510px) {
+  .courseReg .Reg{
+    width: 100%;
+  }
+  .courseReg .Result{
+    width: 100%;
+    overflow: auto;
+  }
+  .Reg tr button{
+    width: 5.7rem;
+  }
+}
+@media (max-width: 416px) {
+  .Reg tr button{
+    width: 5.5rem;
+  }
+  .Reg{
+    padding: 1rem 0rem;
+    }
+}

@@ -1,0 +1,76 @@
+@use '../partials/variables' as *;
+@use '../partials/mixins' as *;
+
+.Resource {
+  width: 41rem;
+  padding: 1rem;
+  margin: auto;
+  margin-top: 7rem;
+  background:$pageBackground;
+  box-shadow: $primaryBoxShadow;
+  border-radius: 0.28rem;
+}
+.Resource h2 {
+  margin-bottom: 1rem;
+  text-align: center;
+  font-size: $pageHeadingFontSize;
+}
+.Resource select {
+  display: block;
+  width: 90%;
+  margin: auto;
+  padding: 0.7rem 0.2rem;
+  background: #f1f1f1;
+  border: none;
+  outline: none;
+  margin-bottom: 2rem;
+  border-radius: 0.15rem;
+}
+option {
+  font-weight: bolder;
+}
+.Resource button {
+  margin-top: 1.2rem;
+  margin-bottom: 1rem;
+  // margin-left: 75%;
+  @include button;
+  &:focus{
+    background: $primaryBackgroundcolor;
+}
+  
+}
+.Resource .btn{
+  width: fit-content;
+  display: block;
+  margin-right: 2rem;
+  text-align: end;
+  margin-left: auto;
+
+}
+@media (max-width: 995px) {
+  .Resource {
+    width: 80%;
+  }
+}
+@media (max-width: 645px) {
+  .Resource .btn{
+    margin-right: 1.3rem;
+  
+  }
+}
+@media (max-width: 551px) {
+  .Resource {
+    width: 90%;
+  }
+}
+@media (max-width: 455px) {
+  .Resource {
+    width: 96%;
+  }
+}
+@media (max-width: 400px) {
+  .Resource .btn{
+    margin-right: 1.1rem;
+  
+  }
+}

@@ -1,0 +1,47 @@
+@use '../partials/variables' as *;
+.Department h1 {
+  text-align: center;
+  margin-bottom: 0.8rem;
+  font-size: $pageHeadingFontSize;
+}
+.Department {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  margin-bottom: 4rem;
+}
+.lecturers,
+.courses {
+  width: fit-content;
+  margin: 0.8rem;
+  margin-top: 3rem;
+  background: $pageBackground;
+  padding: 0.5rem 1rem;
+  padding-bottom: 2rem;
+  box-shadow: $primaryBoxShadow;
+}
+.lecturers td,
+.courses td {
+  border-bottom: 1px solid gray;
+  padding: 0.5rem;
+}
+.courses {
+  padding-left: 0rem;
+}
+
+thead th {
+  border-bottom: 1px solid gray;
+  padding: 0.9rem 1rem;
+}
+@media (max-width: 642px) {
+  .Department {
+    display: block;
+    width: fit-content;
+    margin: auto;
+  }
+  .Department .courses {
+    display: block;
+    width:95%;
+    margin: auto;
+  }
+}
