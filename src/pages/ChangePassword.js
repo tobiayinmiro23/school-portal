@@ -9,7 +9,7 @@ import { displayPopUpMessage } from '../helper function/popUp';
 
 function ChangePassword() {
     let userData=useContext(userContext)
-    const [userId,,,,,,token,,,]=userData
+    const [userId,,,,,,token,,username,]=userData
     const [userName, setuserName] = useState('')
     const [Password, setPassword] = useState('')
     const [confirmPassword, setconfirmPassword] = useState('')
@@ -42,9 +42,9 @@ function ChangePassword() {
                 {loading && <div className='loaderWrapper'><div className='loader'><Loader loaderStyle={loaderStyle}/></div></div>}
                 <form action="">
                     <h1>Reset Password</h1>
-                        <div className="text"><input type="text" value={userName} onChange={(e)=>setuserName(e.target.value)} placeholder='username' /></div>
-                        <PasswordVisible Password={Password} setPassword={setPassword}/>
-                        <PasswordVisible Password={confirmPassword} setPassword={setconfirmPassword}/>
+                        <div className="text"><input type="text" value={username} /></div>
+                        <PasswordVisible Password={Password} setPassword={setPassword} placeholder={'new password'}/>
+                        <PasswordVisible Password={confirmPassword} setPassword={setconfirmPassword}  placeholder={'confirm new password'}/>
                         <div className="btn">
                             <button onClick={(e)=>handleButton(e)}>Submit</button>
                         </div>
