@@ -98,6 +98,11 @@
     width: 6.05rem;
   }
 }
+@media (max-width: 523px) {
+  .Reg .delCourse button{
+      width: 6.5rem;
+  } 
+}
 @media (max-width: 510px) {
   .courseReg .Reg{
     width: 100%;
@@ -115,6 +120,11 @@
     width: 5.5rem;
   }
   .Reg{
-    padding: 1rem 0rem;
+    padding: 1rem 0rem; 
     }
+}
+@media (max-width: 343px) {
+  .Reg .delCourse button{
+      width: 5.87rem;
+  } 
 }
