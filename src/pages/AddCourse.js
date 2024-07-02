@@ -38,9 +38,9 @@ const AddCourse = () => {
 
    const cancelMultipleCourse=()=>{
     setselectMultipleCourse(false)
-    setcheckAll(false)
+    setcheckAll(false) // verry necessary
     setcheckAllInput(false)
-    checkBothSemesters(false)
+    checkBothSemesters(false) 
 
    }
     // code to add a single course
@@ -104,8 +104,10 @@ const AddCourse = () => {
                 displayPopUpMessage(data?.code==='ERR_BAD_REQUEST' ? 'unable to add courses, an error occured please try again later': data?.message ,setpopUpMsg,setpopUpType,setdisplayPopUp,data?.status)
             }
             cancelPopUP(setdisplayPopUp,500)
+            setselectMultipleCourse(false)
             setcheckAllInput(false)
-            setcheckAll(false)
+            checkBothSemesters(false)
+
     }
     
   const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
@@ -125,7 +127,6 @@ const AddCourse = () => {
                     <div className='multipleBtn'><button onClick={(e)=>setselectMultipleCourse(true)}><h3>select multiple course</h3></button></div>
                     }
                 </div>
-                <button ></button>
                 <table >
                     <thead>
                         <tr>
