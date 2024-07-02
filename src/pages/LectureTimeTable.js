@@ -35,7 +35,7 @@ function LectureTimeTable() {
                                 <td className='lecturenone'></td>
                                 <td className='class'><h5>CPT213</h5><p>2hrs</p></td>
                                 <td className='lecturenone'></td>
-                                <td className='class'><h5>CPT211</h5><p>2hrs</p></td>
+                                <td className='timetablenone'></td>
                                 <td className='timetablenone'></td>
                                 <td className='timetablenone'></td>
                             </tr>
@@ -70,7 +70,7 @@ function LectureTimeTable() {
                             <tr>
                                 <td ><h3>Thur</h3></td>
                                 <td></td>
-                                <td></td>
+                                <td className='class'><h5>CPT211</h5><p>2hrs</p></td>
                                 <td></td>
                                 <td></td>
                                 <td></td>
