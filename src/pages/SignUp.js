@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useContext } from 'react'
 import '../styles/pages/Login.scss'
+import axios from 'axios'
 import { Link, useNavigate } from 'react-router-dom'
 import { PopUpMessageWithAutoCancel, Loader, PasswordVisible } from '../AllFiles'
 import { cancelPopUP } from '../helper function/cancelPopUp'
@@ -32,7 +33,22 @@ const SignUp = () => {
     }
     return null;
   };
+
+  const pingServer = async () => {
+    try {
+      let response = axios({
+        method: 'get',
+        url: 'https://courseregistrationbackend.onrender.com/'
+      })
+      let data = await response
+      console.log(data.data)
+    } catch (err) {
+      console.log(err)
+    }
+  }
+
   useEffect(async () => {
+    pingServer()
     let data = getCookie()
     if (data?.length > 0) {
       const [id, matricNumber, token, username] = data
