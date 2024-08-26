@@ -38,7 +38,7 @@ export const getPhoto = async (userName, route) => {
   try {
     let response = axios({
       method: 'post',
-      // url: `https://courseregistrationbackend.onrender.com/${route}`,
+      url: `https://courseregistrationbackend.onrender.com/${route}`,
       withCredentials: true,
       data: {
         userName,
