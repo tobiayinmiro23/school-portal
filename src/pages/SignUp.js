@@ -55,7 +55,7 @@ const SignUp = () => {
       // i fetch the photo differently because it's to long to store in cookie
       let response = getPhoto(username, 'getPhoto')
       let photo = await response
-      if (photo?.status) setphotoUrl(photo.message)
+      photo?.message === null ? setphotoUrl('/image/user.png') : setphotoUrl(photo?.message)
       setuserId(id)
       setmatricNumber(matricNumber)
       settoken(token)
