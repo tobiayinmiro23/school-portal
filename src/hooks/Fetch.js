@@ -3,7 +3,6 @@ export const signin= async(userName,password,route)=>{
   try{
         let response= axios({
           method: 'post',
-          // url: `http://localhost:3000/${route}`,
           url: `https://courseregistrationbackend.onrender.com/${route}`,
           withCredentials:true,
           data: {
@@ -18,24 +17,38 @@ export const signin= async(userName,password,route)=>{
        }
 }
 
-export const login= async(userName,password,checkBox,route)=>{
-  try{
-        let response= axios({
-          method: 'post',
-          url: `https://courseregistrationbackend.onrender.com/${route}`,
-          withCredentials:true,
-          headers:{checked:checkBox},
-          data: {
-            userName,
-           password,
-           checked:checkBox
-         }
-        })
-          let data= await response
-          return  data.data
-       }catch(err){
-        return err
-       }
+export const login = async (userName, password, route) => {
+  try {
+    let response = axios({
+      method: 'post',
+      url: `https://courseregistrationbackend.onrender.com/${route}`,
+      withCredentials: true,
+      data: {
+        userName,
+        password,
+      }
+    })
+    let data = await response
+    return data.data
+  } catch (err) {
+    return err
+  }
+}
+export const getPhoto = async (userName, route) => {
+  try {
+    let response = axios({
+      method: 'post',
+      // url: `https://courseregistrationbackend.onrender.com/${route}`,
+      withCredentials: true,
+      data: {
+        userName,
+      }
+    })
+    let data = await response
+    return data.data
+  } catch (err) {
+    return err
+  }
 }
 
 export const rememberMe=async(route)=>{
