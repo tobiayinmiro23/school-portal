@@ -50,20 +50,19 @@ const SignUp = () => {
   useEffect(async () => {
     pingServer()
     let data = getCookie()
-    if (data?.length > 0) {
+      if (data?.length > 0) {
       const [id, matricNumber, token, username] = data
       // i fetch the photo differently because it's to long to store in cookie
-      let response = getPhoto(username, 'getPhoto')
-      let photo = await response
-      photo?.message === null ? setphotoUrl('/image/user.png') : setphotoUrl(photo?.message)
       setuserId(id)
       setmatricNumber(matricNumber)
       settoken(token)
       setusername(username)
       setLoading(false)
       navigate('DashBoard')
+      let response = getPhoto(username, 'getPhoto')
+      let photo = await response
+      photo?.message === null ? setphotoUrl('/image/user.png') : setphotoUrl(photo?.message)
     } else setLoading(false)
-
   }, [])
 
   const CreateAccount = async (e) => {
