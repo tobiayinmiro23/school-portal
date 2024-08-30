@@ -49,7 +49,10 @@ const Login = () => {
       setphotoUrl(photoUrl)
       settoken(token)
       setusername(username)
-      if (checkBox) setCookie(id, matricNumber, token, username)
+      if (checkBox) {
+        setCookie('creg', id, matricNumber, token, username)
+        setCookie('creg_img', photoUrl)
+      }
       navigate('/DashBoard')
     } else {
       setLoading2(false)
@@ -57,6 +60,7 @@ const Login = () => {
       cancelPopUP(setdisplayPopUp, 500)
     }
   }
+  
   const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
   return (
     <div className='Login'>
