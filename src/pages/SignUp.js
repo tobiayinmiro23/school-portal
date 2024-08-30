@@ -23,13 +23,11 @@ const SignUp = () => {
     margin: "38vh auto"
   }
   const navigate = useNavigate()
-  const getCookie = () => {
+  const getCookie = (name) => {
     const cookies = document.cookie.split(';');
     for (const cookie of cookies) {
-      const [cookieName, cookieValue] = cookie.trim().split('=');
-      if (cookieName === 'creg') {
-        return JSON.parse(cookieValue)
-      }
+      let b = cookie.trim().split('$')
+      if (b[0] === name) return b[1]
     }
     return null;
   };
@@ -49,21 +47,22 @@ const SignUp = () => {
 
   useEffect(async () => {
     pingServer()
-    let data = getCookie()
-      if (data?.length > 0) {
-      const [id, matricNumber, token, username] = data
-      // i fetch the photo differently because it's to long to store in cookie
+    let userImg = getCookie('creg_img=["')
+    if (userImg === null || userImg === '') setphotoUrl('/image/user.png')
+    else setphotoUrl(userImg)
+    let data = getCookie('creg=["')
+    let userData = data?.split(',')
+    if (userData?.length > 0) {
+      const [id, matricNumber, token, username] = userData
       setuserId(id)
       setmatricNumber(matricNumber)
       settoken(token)
       setusername(username)
       setLoading(false)
       navigate('DashBoard')
-      let response = getPhoto(username, 'getPhoto')
-      let photo = await response
-      photo?.message === null ? setphotoUrl('/image/user.png') : setphotoUrl(photo?.message)
     } else setLoading(false)
   }, [])
+
 
   const CreateAccount = async (e) => {
     e.preventDefault()
