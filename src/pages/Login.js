@@ -26,12 +26,14 @@ const Login = () => {
   const loaderStyle = {
     margin: "38vh auto"
   }
-  const setCookie = (...data) => {
+  
+ const setCookie = (cookieName, ...data) => {
     const expirationDate = new Date();
-    expirationDate.setDate(expirationDate.getDate() + 4);
-    const cookieValue = JSON.stringify([...data]) + (1 ? `; expires=${expirationDate.toUTCString()}` : '');
-    document.cookie = `creg=${cookieValue}; path=/`;
+    expirationDate.setMinutes(expirationDate.getMinutes() + 15);
+    const cookieValue = JSON.stringify(['$' + data + '$']) + (1 ? `; expires=${expirationDate.toUTCString()}` : '');
+    document.cookie = `${cookieName}=${cookieValue}; path=/`;
   };
+  
   const handleLogin = async (e) => {
     setLoading2(true)
     e.preventDefault()
