@@ -24,42 +24,63 @@ function SideBar({mobile,setmobile}) {
     const [displayPopUp, setdisplayPopUp] = useState(false)
     const [popUpType, setpopUpType] = useState('error')
     const storage = getStorage();
-    const upload=(file)=>{
-      setuploading(true)
-      const storageRef = ref(storage,`images/${Date.now()}${file.name}`);
-      const uploadTask=uploadBytesResumable(storageRef, file)
-          uploadTask.on('state_changed',
-          (snapshot) => {
-            // Get task progress, including the number of bytes uploaded and the total number of bytes to be uploaded
-            const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-            setuploadProgress(progress)
-          }, 
-          (error) => {
-            setuploading(false)
-            displayPopUpMessage(error?.message|| 'an error occured ,try again later',setpopUpMsg,setpopUpType,setdisplayPopUp,false)
-            cancelPopUP(setdisplayPopUp,500)
-          }, 
-          () => {
-            // Upload completed successfully, now we can get the download URL
-            getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
-              setfileDownloadLink(downloadURL)
-              UploadingPhoto(downloadURL,userId,token,'updateProfilePicture')
-              .then( ()=>{
-                displayPopUpMessage('photo successfully uploaded',setpopUpMsg,setpopUpType,setdisplayPopUp,true)
-                cancelPopUP(setdisplayPopUp,500)
-                setuploading(false)
-              })
-              .catch(error=>{
-                displayPopUpMessage(error?.message|| 'an error occured ,try again later',setpopUpMsg,setpopUpType,setdisplayPopUp,false)
-                cancelPopUP(setdisplayPopUp,500)
-                setuploading(false)
-              })
+
+     const getCookie = (name) => {
+    const cookies = document.cookie.split(';');
+    for (const cookie of cookies) {
+      let b = cookie.trim().split('$')
+      if (b[0] === name) return b[1]
+    }
+    return false;
+  };
+
+  const setCookie = (cookieName, ...data) => {
+    const expirationDate = new Date();
+    expirationDate.setMinutes(expirationDate.getMinutes() + 15);
+    const cookieValue = JSON.stringify(['$' + data + '$']) + (1 ? `; expires=${expirationDate.toUTCString()}` : '');
+    document.cookie = `${cookieName}=${cookieValue}; path=/`;
+  };
+
+  const upload = (file) => {
+    setuploading(true)
+    const storageRef = ref(storage, `images/${Date.now()}${file.name}`);
+    const uploadTask = uploadBytesResumable(storageRef, file)
+    uploadTask.on('state_changed',
+      (snapshot) => {
+        // Get task progress, including the number of bytes uploaded and the total number of bytes to be uploaded
+        const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+        setuploadProgress(progress)
+      },
+      (error) => {
+        setuploading(false)
+        displayPopUpMessage(error?.message || 'an error occured ,try again later', setpopUpMsg, setpopUpType, setdisplayPopUp, false)
+        cancelPopUP(setdisplayPopUp, 500)
+      },
+      () => {
+        // Upload completed successfully, now we can get the download URL
+        getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
+          setfileDownloadLink(downloadURL)
+          UploadingPhoto(downloadURL, userId, token, 'updateProfilePicture')
+            .then((res) => {
               setuploading(false)
-              setuploadProgress(0)
-            });
-          }
-        );
+              if (res?.status) {
+                displayPopUpMessage('photo successfully uploaded', setpopUpMsg, setpopUpType, setdisplayPopUp, true)
+                let userImg = getCookie('creg_img=["')
+                if (userImg !== false) setCookie('creg_img', downloadURL)
+              } else displayPopUpMessage(res?.message || 'an error occured ,try again later', setpopUpMsg, setpopUpType, setdisplayPopUp, false)
+              cancelPopUP(setdisplayPopUp, 500)
+            })
+            .catch(error => {
+              displayPopUpMessage(error?.message || 'an error occured ,try again later', setpopUpMsg, setpopUpType, setdisplayPopUp, false)
+              cancelPopUP(setdisplayPopUp, 500)
+              setuploading(false)
+            })
+          setuploading(false)
+          setuploadProgress(0)
+        });
       }
+    );
+  }
 
     let DashBoard=useRef()
     let Result=useRef()
