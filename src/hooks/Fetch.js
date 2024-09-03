@@ -147,7 +147,8 @@ export const deleteCourse=async(userId,token,id,route)=>{
   try{
     let response= axios({
       method: 'delete',
-      url: `https://courseregistrationbackend.onrender.com/${route}/${id}`,
+      // url: `https://courseregistrationbackend.onrender.com/${route}/${id}`,
+      url: `https://courseregistrationbackend.onrender.com/${route}`,
       withCredentials:true,
       data: {
         userId,
