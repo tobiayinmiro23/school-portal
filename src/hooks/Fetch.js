@@ -147,16 +147,12 @@ export const deleteCourse=async(userId,token,id,route)=>{
   try{
     let response= axios({
       method: 'delete',
-      // url: `https://courseregistrationbackend.onrender.com/${route}/${id}`,
-      url: `https://courseregistrationbackend.onrender.com/${route}`,
+      url: `https://courseregistrationbackend.onrender.com/${route}/${id}`,
       withCredentials:true,
       data: {
         userId,
         token
-      },
-    params:{
-        id
-    }
+      }
     })
       let data= await response
       return  data.data
