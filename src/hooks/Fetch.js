@@ -21,7 +21,7 @@ export const login = async (userName, password, route) => {
   try {
     let response = axios({
       method: 'post',
-      url: `${process.env.BACKEND_ENDPOINT}/${route}`,
+      url: `https://courseregistrationbackend.onrender.com/${route}`,
       withCredentials: true,
       data: {
         userName,
@@ -160,3 +160,4 @@ export const deleteCourse=async(userId,token,id,route)=>{
     return err
    }
 }
+
