@@ -1,11 +1,9 @@
-
-
 import axios from "axios";
 export const signin= async(userName,password,route)=>{
   try{
         let response= axios({
           method: 'post',
-          url: `https://courseregistrationbackend-production.up.railway.app/${route}`,
+          url: `${process.env.BACKEND_ENDPOINT}/${route}`,
           withCredentials:true,
           data: {
             userName,
@@ -23,7 +21,7 @@ export const login = async (userName, password, route) => {
   try {
     let response = axios({
       method: 'post',
-      url: `https://courseregistrationbackend-production.up.railway.app/${route}`,
+      url: `${process.env.BACKEND_ENDPOINT}/${route}`,
       withCredentials: true,
       data: {
         userName,
@@ -40,7 +38,7 @@ export const getPhoto = async (userName, route) => {
   try {
     let response = axios({
       method: 'post',
-      url: `https://courseregistrationbackend-production.up.railway.app/${route}`,
+      url: `${process.env.BACKEND_ENDPOINT}/${route}`,
       withCredentials: true,
       data: {
         userName,
@@ -57,7 +55,7 @@ export const rememberMe=async(route)=>{
    try{
     let response=axios({
       method: 'get',
-      url: `https://courseregistrationbackend-production.up.railway.app/${route}`,
+      url: `${process.env.BACKEND_ENDPOINT}/${route}`,
       withCredentials:true
     })
     let data=await response
@@ -70,7 +68,7 @@ export const ForgotPassword=async(password,userid,token,route)=>{
   try{
     let response= axios({
       method: 'post',
-      url: `https://courseregistrationbackend-production.up.railway.app/${route}`,
+      url: `${process.env.BACKEND_ENDPOINT}/${route}`,
       withCredentials:true,
       data: {
         password
@@ -91,7 +89,7 @@ export const UploadingPhoto=async(photo,userid,token,route)=>{
   try{
     let response= axios({
       method: 'post',
-      url: `https://courseregistrationbackend-production.up.railway.app/${route}`,
+      url: `${process.env.BACKEND_ENDPOINT}/${route}`,
       withCredentials:true,
       data: {
         photo
@@ -113,7 +111,7 @@ export const addCourse=async(userid,token,body,route)=>{
   try{
     let response= axios({
       method: 'post',
-      url: `https://courseregistrationbackend-production.up.railway.app/${route}`,
+      url: `${process.env.BACKEND_ENDPOINT}/${route}`,
       withCredentials:true,
       headers: {
         userid,
@@ -132,7 +130,7 @@ export const getAllCourse=async(userid,token,route)=>{
   try{
     let response= axios({
       method: 'post',
-      url: `https://courseregistrationbackend-production.up.railway.app/${route}`,
+      url: `${process.env.BACKEND_ENDPOINT}/${route}`,
       withCredentials:true,
       data: {
         userid,
@@ -149,7 +147,7 @@ export const deleteCourse=async(userId,token,id,route)=>{
   try{
     let response= axios({
       method: 'delete',
-      url: `https://courseregistrationbackend-production.up.railway.app/${route}/${id}`,
+      url: `${process.env.BACKEND_ENDPOINT}/${route}/${id}`,
       withCredentials:true,
       data: {
         userId,
@@ -162,4 +160,3 @@ export const deleteCourse=async(userId,token,id,route)=>{
     return err
    }
 }
-
