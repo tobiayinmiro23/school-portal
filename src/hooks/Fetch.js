@@ -3,7 +3,7 @@ export const signin= async(userName,password,route)=>{
   try{
         let response= axios({
           method: 'post',
-          url: `${process.env.BACKEND_ENDPOINT}/${route}`,
+          url: `https://courseregistrationbackend.onrender.com/${route}`,
           withCredentials:true,
           data: {
             userName,
@@ -38,7 +38,7 @@ export const getPhoto = async (userName, route) => {
   try {
     let response = axios({
       method: 'post',
-      url: `${process.env.BACKEND_ENDPOINT}/${route}`,
+      url: `https://courseregistrationbackend.onrender.com/${route}`,
       withCredentials: true,
       data: {
         userName,
@@ -55,7 +55,7 @@ export const rememberMe=async(route)=>{
    try{
     let response=axios({
       method: 'get',
-      url: `${process.env.BACKEND_ENDPOINT}/${route}`,
+      url: `https://courseregistrationbackend.onrender.com/${route}`,
       withCredentials:true
     })
     let data=await response
@@ -68,7 +68,7 @@ export const ForgotPassword=async(password,userid,token,route)=>{
   try{
     let response= axios({
       method: 'post',
-      url: `${process.env.BACKEND_ENDPOINT}/${route}`,
+      url: `https://courseregistrationbackend.onrender.com/${route}`,
       withCredentials:true,
       data: {
         password
@@ -89,7 +89,7 @@ export const UploadingPhoto=async(photo,userid,token,route)=>{
   try{
     let response= axios({
       method: 'post',
-      url: `${process.env.BACKEND_ENDPOINT}/${route}`,
+      url: `https://courseregistrationbackend.onrender.com/${route}`,
       withCredentials:true,
       data: {
         photo
@@ -111,7 +111,7 @@ export const addCourse=async(userid,token,body,route)=>{
   try{
     let response= axios({
       method: 'post',
-      url: `${process.env.BACKEND_ENDPOINT}/${route}`,
+      url: `https://courseregistrationbackend.onrender.com/${route}`,
       withCredentials:true,
       headers: {
         userid,
@@ -130,7 +130,7 @@ export const getAllCourse=async(userid,token,route)=>{
   try{
     let response= axios({
       method: 'post',
-      url: `${process.env.BACKEND_ENDPOINT}/${route}`,
+      url: `https://courseregistrationbackend.onrender.com/${route}`,
       withCredentials:true,
       data: {
         userid,
@@ -147,7 +147,7 @@ export const deleteCourse=async(userId,token,id,route)=>{
   try{
     let response= axios({
       method: 'delete',
-      url: `${process.env.BACKEND_ENDPOINT}/${route}/${id}`,
+      url: `https://courseregistrationbackend.onrender.com/${route}/${id}`,
       withCredentials:true,
       data: {
         userId,
@@ -160,4 +160,3 @@ export const deleteCourse=async(userId,token,id,route)=>{
     return err
    }
 }
-
