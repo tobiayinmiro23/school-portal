@@ -20,7 +20,7 @@ A school portal website built with react, sass, materialUI and firebase.
 
 ## 📋 Prerequisites
 
-- Node.js >= 18
+- Node.js >= 15
 - npm or yarn
 
 
